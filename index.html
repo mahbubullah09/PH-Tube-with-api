@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="max-w-5xl mx-auto">
+
+    <header class="mx-4">
+        <div class="navbar bg-base-100 ">
+            <div class=" navbar-start">
+              <figure>
+                <img  class="w-2/3" src="./images/Logo.png" alt="">
+              </figure>
+            </div>
+            <div class="navbar-center">
+              <button id="click" class="bg-[#252525] bg-opacity-20 text-[ #252525] text-sm md:text-base py-1 px-3 rounded">Sort by view</button>
+            </div>
+            <div class="navbar-end">
+
+                <button onclick="location.href = 'blog.html'" class="bg-[#FF1F3D] text-white text-sm md:text-base py-1 px-3 rounded">Blog</button>
+           
+            </div>
+          </div>
+          <hr>
+    </header>
+
+    <main class="mx-4" >
+        <section class="mx-8">
+            <div id="catagory-field" class="catagory text-center mb-8 flex gap-4 justify-center flex-wrap">
+           
+            </div>
+        </section>
+
+        <section>
+
+            <div id="card-field" class="card-cont mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+               
+            </div>
+
+        </section>
+    </main>
+
+    
+ 
+<script src="./js/index.js"></script>
+</body>
+
+</html>

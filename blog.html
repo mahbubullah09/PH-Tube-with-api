@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="max-w-5xl mx-auto px-4 lg:px-0">
+
+    <header class="mx-4">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <figure>
+                    <img onclick="location.href ='index.html'" class="w-2/3 cursor-pointer " class="w-2/3"
+                        src="./images/Logo.png" alt="">
+                </figure>
+            </div>
+
+
+
+            <div class="navbar-end">
+
+                <button onclick="location.href ='index.html'"
+                    class="bg-[#FF1F3D] text-white text-sm md:text-base py-1 px-3 rounded">Home</button>
+
+            </div>
+        </div>
+        <hr>
+        
+    </header>
+
+    <main class="max-w-4xl mx-auto">
+
+        <div  class="catagory text-center  flex gap-4 justify-center flex-wrap mb-14">
+            <button onclick="location.href ='#Scope'"  class="bg-[#252525] bg-opacity-20 text-[ #252525] text-base py-1 px-3 rounded mt-2 ">Scope of Veriable</button>`
+            <button onclick="location.href ='#null'" class="bg-[#252525] bg-opacity-20 text-[ #252525] text-base py-1 px-3 rounded mt-2 ">Null & undefined</button>`
+            <button onclick="location.href ='#api'"  class="bg-[#252525] bg-opacity-20 text-[ #252525] text-base py-1 px-3 rounded mt-2 ">REST API</button>`
+        </div>
+
+        <section id="Scope" class="max-w-3xl mx-auto">
+
+            <h2 class="font-extrabold text-6xl my-10">JavaScript: Declaring Variables with Var, Let, and Const</h2>
+
+            <p class="text-lg mt-4">Variable declaration in JavaScript can be performed in different ways with three
+                keywords; var, let, and
+                const. If you are not clear about the main differences between these keywords and when to choose one
+                over the other, this post is for you.
+                <br>
+                <br>
+                Before we get into details, let’s first understand what scope is:
+            </p>
+
+            <h4 class=" text-xl font-bold mt-8 ">Variable Scope</h4>
+            <p class="text-lg mt-4">Scope refers to the visibility of a variable in JavaScript, this means that a
+                variable is not accessible
+                outside the scope in which it is defined.
+
+                <br>
+                <br>
+                <span class="text-xl font-bold mt-8">Global Scope:</span> Variables declared outside of a function or a
+                block have global scope and are accessible
+                from everywhere in the code.
+                <br>
+                <br>
+                <span class="text-xl font-bold mt-8">Local Scope:</span> Variables declared inside a function or a block
+                have local scope and they are accessible
+                only within that function or block, not accessible from the global scope. There are two types of local
+                scope in JavaScript:
+            </p>
+            <br>
+            <br>
+            <ul class="list-decimal px-2">
+
+                <li><span class="text-xl font-bold mt-8">Function Scope:</span> When a new function is declared, it
+                    creates its own scope. Variables defined in the
+                    function are bound to it and can not be accessed outside the function.</li>
+                <br>
+                <br>
+                <li><span class="text-xl font-bold mt-8">Block Scope:</span> A code block in JavaScript can be defined
+                    using {curly braces} and variables defined
+                    inside of a block statement like if conditions or for and while loops are block scoped. This means
+                    that variables defined inside of a block are accessible only within that curly brace. Let’s take a
+                    look at an example:</li>
+
+            </ul>
+
+            <br>
+            <br>
+            <img src="./blog image/1.00.png" alt="">
+
+
+            <p class="text-lg mt-4">The first and second console.log(color1) both log the variable color1 because it is
+                declared in the
+                global scope.
+
+                The first console.log(color2) logs the variable color2 successfully because it is accessible within the
+                function addColor, whereas the second console.log(color2) throws an error because the variable color2 is
+                not visible outside of its scope.
+                <br>
+                Now, let’s explain what the keywords var, let, and const are:
+            </p>
+
+
+            <h4 class=" text-xl font-bold mt-8 ">Var</h4>
+
+            <p class="text-lg mt-4">Var was the only keyword used to declare variables in JavaScript before let and
+                const were introduced
+                recently with ES6 (ECMAScript 2015). Var declarations are either globally scoped or locally (function)
+                scoped, but not block scoped.
+                <br>
+                Var can be updated and redeclared within the same scope without getting an error. The second variable
+                you declared with var overwrites the first one. This might cause you to accidentally overwrite the value
+                of the existing variable with the same name and debugging becomes hard in this situation.
+            </p>
+
+
+            <h4 class=" text-xl font-bold mt-8 ">Let</h4>
+
+            <p class="text-lg mt-4">ES6 introduced the new keyword let in 2015. The main difference between var and let
+                is that var is
+                function scoped while let is block scoped. When a variable is declared with let in if statement or for
+                loop, it is only valid in that block and this helps to debug your code easily.
+
+                Let can be updated within its scope like var, but let can not be redeclared within its scope. This is
+                why it is better to use let because it reduces the potential error of redeclaring a variable
+                accidentally more than once within the same scope like var does.</p>
+
+            <h4 class=" text-xl font-bold mt-8 ">Const</h4>
+            <p class="text-lg mt-4">Declaration of the variables with const is similar to let and it is block scoped.
+                The difference between
+                const and let is that a new value can not be assigned to a variable with const after the initial value
+                is set, which means that const creates constant variables within its scope.
+                <br>
+                Let’s look at the example below to understand the differences in their scope:
+            </p>
+            <br>
+            <img src="./blog image/2.00.png" alt="">
+            <br>
+            <p class="text-lg mt-4">All the variables are accessible within the same if statement/block. Although the
+                variable color1 is
+                still visible out of the block because of its function scope, the other two variables color2 and color3
+                are not valid anymore because we can access these two variables only within the curly braces they are
+                declared in. Lastly, there is no access to any of those variables out of the function, because they are
+                not globally scoped.
+                <br>
+                Here is a table to summarize what we have discussed:
+            </p>
+            <br>
+            <img src="./blog image/3.00.png" alt="">
+            <br>
+            <p class="text-lg mt-4 mb-20">Generally, it is advised to avoid using var. The best practice is to use const
+                as a
+                default option unless
+                you need to reassign the variable in for loops or switch statements, in that case, let will be a better
+                option.</p>
+
+
+        </section>
+
+        <hr class="h-4 text-amber-800 bg-black">
+
+        <section id="null" class="max-w-3xl mx-auto">
+
+            <h1 class="text-6xl font-extrabold my-10">Difference between null and undefined in JavaScript</h1>
+
+            <p class="text-lg mb-4">Here you will learn what is null and undefined in JavaScript and what is the
+                difference between them.</p>
+
+            <h4 class=" text-xl font-bold mt-8 ">What is a null?</h4>
+
+            <p class="text-lg mb-4">A null means the absence of a value. You assign a null to a variable with the
+                intention that currently this variable does not have any value but it will have later on. It is like a
+                placeholder for a value. The type of null is the object.</p>
+
+            <img src="./blog image/4.png" alt="">
+            <br>
+            <p class="text-lg mb-4">Sometimes, null variables are the result of erroneous code. For example, if you try
+                to find an HTML element using document.getElelementByID() with the wrong id, then it will return null.
+                So it is recommended to check for null before doing something with that element.</p>
+
+            <img src="./blog image/5.png" alt="">
+            <br>
+            <h4 class=" text-xl font-bold mt-8 ">What is undefined?</h4>
+
+            <p class="text-lg mb-4"> A variable is undefined when you haven't assigned any value yet, not even a null.
+            </p>
+
+            <img src="./blog image/6.png" alt="">
+            <br>
+            <p class="text-lg mb-4">Generally, variables are undefined when you forgot to assign values or change
+                existing code. For example, consider the following Greet() function that returns a string.</p>
+            <img src="./blog image/7.png" alt="">
+            <br>
+            <p class="text-lg mb-4">Now, suppose somebody changes the function as below. So now, str will be undefined.
+            </p>
+            <img src="./blog image/8.png" alt="">
+            <br>
+            <p class="text-lg mb-4">Thus, undefined variables are the result of some code problems.</p>
+
+            <h4 class=" text-xl font-bold mt-8 ">Difference between null and undefined</h4>
+
+            <p class="text-lg mb-4">You must explicitly assign a null to a variable. A variable has undefined when no
+                value assigned to it.</p>
+
+            <img src="./blog image/9.png" alt="">
+            <br>
+            <p class="text-lg mb-4">The '' is not the same as null or undefined.</p>
+
+            <img src="./blog image/10.png" alt="">
+            <br>
+            <p class="text-lg mb-4">The type of null variable is object whereas the type of undefined variable is
+                "undefined".</p>
+
+            <img src="./blog image/11.png" alt="">
+            <br>
+            <p class="text-lg mb-4">Use the === operator to check whether a variable is null or undefined. The ==
+                operator gives the wrong result.</p>
+            <img src="./blog image/12.png" alt="">
+            <br>
+            <p>The null and undefined variables are falsy to if-statements and ternary operators.</p>
+            <img src="./blog image/13.png" alt="">
+            <br>
+            <p class="text-lg mb-4">A null variable treated as 0 in an numeric expression whereas undefined variable
+                will be NaN.</p>
+
+            <img src="./blog image/14.png" alt="">
+            <br>
+            <p class="text-lg mb-4">Note: The null and undefined variables are one of the main reasons for runtime
+                errors in JavaScript. The best practice is to check variables for null or undefined before using them.
+            </p>
+
+
+
+        </section>
+
+<hr class="h-4 text-amber-800 bg-black">
+        <section id="api" class="max-w-3xl mx-auto">
+
+            <h1 class="font-extrabold text-8xl my-14"> API</h1>
+
+
+            <h1 class="font-extrabold text-5xl my-10">What is a REST API?</h1>
+
+            <p class="text-lg mb-4">An API, or application programming interface, is a set of rules that define how
+                applications or devices
+                can connect to and communicate with each other. A REST API is an API that conforms to the design
+                principles of the REST, or representational state transfer architectural style. For this reason, REST
+                APIs are sometimes referred to RESTful APIs.
+                <br>
+                <br>
+                First defined in 2000 by computer scientist Dr. Roy Fielding in his doctoral dissertation, REST provides
+                a relatively high level of flexibility and freedom for developers. This flexibility is just one reason
+                why REST APIs have emerged as a common method for connecting components and applications in a
+                microservices architecture.
+            </p>
+
+            <br>
+           
+            <br>
+
+            <h2 class="font-bold text-2xl my-8">REST design principles</h2>
+            <p class="text-lg mb-4">
+                At the most basic level, an API is a mechanism that enables an application or service to access a
+                resource within another application or service. The application or service doing the accessing is called
+                the client, and the application or service containing the resource is called the server.
+            </p>
+            <ul class="list-decimal px-2">
+                <li><span class="text-xl font-bold mb-4">Uniform interface.</span> All API requests for the same
+                    resource should look the same, no matter where the
+                    request comes from. The REST API should ensure that the same piece of data, such as the name or
+                    email address of a user, belongs to only one uniform resource identifier (URI). Resources shouldn’t
+                    be too large but should contain every piece of information that the client might need.</li>
+                <li><span class="text-xl font-bold mb-4">Client-server decoupling.</span> In REST API design, client and
+                    server applications must be completely
+                    independent of each other. The only information the client application should know is the URI of the
+                    requested resource; it can't interact with the server application in any other ways. Similarly, a
+                    server application shouldn't modify the client application other than passing it to the requested
+                    data via HTTP.</li>
+                <li><span class="text-xl font-bold mb-4">Statelessness.</span> REST APIs are stateless, meaning that
+                    each request needs to include all the
+                    information necessary for processing it. In other words, REST APIs do not require any server-side
+                    sessions. Server applications aren’t allowed to store any data related to a client request.</li>
+                <li><span class="text-xl font-bold mb-4">Cacheability.</span> When possible, resources should be
+                    cacheable on the client or server side. Server
+                    responses also need to contain information about whether caching is allowed for the delivered
+                    resource. The goal is to improve performance on the client side, while increasing scalability on the
+                    server side.
+                </li>
+                <li><span class="text-xl font-bold mb-4">Layered system architecture.</span> In REST APIs, the calls and
+                    responses go through different layers. As a
+                    rule of thumb, don’t assume that the client and server applications connect directly to each other.
+                    There may be a number of different intermediaries in the communication loop. REST APIs need to be
+                    designed so that neither the client nor the server can tell whether it communicates with the end
+                    application or an intermediary.</li>
+                <li><span class="text-xl font-bold mb-44">Code on demand (optional).</span> REST APIs usually send
+                    static resources, but in certain cases, responses
+                    can also contain executable code (such as Java applets). In these cases, the code should only run
+                    on-demand.</li>
+
+
+            </ul>
+            <br>
+            <br>
+            
+            <br>
+            <h2 class="font-bold text-2xl my-8">How REST APIs work</h2>
+            <p class="text-lg mb-4">REST APIs communicate via HTTP requests to perform standard database functions like
+                creating, reading,
+                updating, and deleting records (also known as CRUD) within a resource. For example, a REST API would use
+                a GET request to retrieve a record, a POST request to create one, a PUT request to update a record, and
+                a DELETE request to delete one. All HTTP methods can be used in API calls. A well-designed REST API is
+                similar to a website running in a web browser with built-in HTTP functionality.
+                <br>
+                <br>
+                The state of a resource at any particular instant, or timestamp, is known as the resource
+                representation. This information can be delivered to a client in virtually any format including
+                JavaScript Object Notation (JSON), HTML, XLT, Python, PHP, or plain text. JSON is popular because it’s
+                readable by both humans and machines—and it is programming language-agnostic.
+                <br>
+                <br>
+                Request headers and parameters are also important in REST API calls because they include important
+                identifier information such as metadata, authorizations, uniform resource identifiers (URIs), caching,
+                cookies and more. Request headers and response headers, along with conventional HTTP status codes, are
+                used within well-designed REST APIs.
+            </p>
+            <br>
+          
+            <br>
+            <h2 class="font-bold text-2xl my-8">REST API best practices</h2>
+            <p class="text-lg mb-4">Although flexibility is a big advantage of REST API design, that same flexibility
+                makes it easy to design
+                an API that’s broken or performs poorly. For this reason, professional developers share best practices
+                in REST API specifications.
+                <br>
+                <br>
+                The OpenAPI Specification (OAS) establishes an interface for describing an API in a way that allows any
+                developer or application to discover it and fully understand its parameters and capabilities - available
+                endpoints, allowed operations on each endpoint, operation parameters, authentication methods, and other
+                information. The latest version, OAS3 (link resides outside ibm.com), includes with hands-on tools, such
+                as the OpenAPI Generator, for generating API clients and server stubs in different programming
+                languages.
+                <br>
+                <br>
+                Securing a REST API also starts with industry best practices, such as using hashing algorithms for
+                password security and HTTPS for secure data transmission. An authorization framework like OAuth 2.0
+                (link resides outside ibm.com) can help limit the privileges of third-party applications. Using a
+                timestamp in the HTTP header, an API can also reject any request that arrives after a certain time
+                period. Parameter validation and JSON Web Tokens are other ways to ensure that only authorized clients
+                can access the API.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
